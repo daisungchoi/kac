@@ -11,11 +11,11 @@ resource "helm_release" "crowdstrike_kca" {
 
   repository = "https://crowdstrike.github.io/falcon-helm"
   chart      = "falcon-sensor"
-  version    = "1.23.0"   # check latest available
+  version    = "1.32.0"   # check latest available
 
   set {
     name  = "falcon.cid"
-    value = "<YOUR-FALCON-CID-HERE>"
+    value = "FC848200B24D46B19026FED6553C5D17-79" # You need to change your sensor ID"
   }
 
   set {
